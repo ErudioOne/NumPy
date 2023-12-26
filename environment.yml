@@ -1,4 +1,4 @@
-name: erudio-numpy
+name: erudio.numpy
 channels:
   - conda-forge
   - defaults
