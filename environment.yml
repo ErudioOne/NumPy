@@ -3,7 +3,12 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.12
+  - python
   - numpy
+  - pandas
   - ca-certificates
   - openssl
+  - matplotlib
+  - jupyterlab
+  - certifi
+  - jupytext
