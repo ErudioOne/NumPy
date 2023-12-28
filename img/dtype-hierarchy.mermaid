@@ -1,0 +1,69 @@
+%%{ init: { 'flowchart': {'curve': 'linear', 'nodeSpacing': 10, 'rankSpacing': 60} }}%%
+
+flowchart LR
+
+    A[generic] --> B[bool_]
+    A[generic] --> C[object_]
+    A[generic] --> D[number]
+    A[generic] --> E[flexible]
+
+    subgraph character
+        direction TB
+        bytes_
+        str_
+    end
+
+    subgraph signedinteger
+        direction TB
+        byte
+        short
+        intc
+        int_
+        longlong
+    end
+
+    subgraph unsignedinteger
+        direction TB
+        ubyte
+        ushort
+        uintc
+        uint_
+        ulonglong
+    end
+
+    subgraph floating
+        direction TB
+        half
+        single
+        float_
+        longfloat
+    end
+
+    subgraph complexfloating
+        direction TB
+        csingle
+        complex_
+        clongfloat
+    end
+
+    E --> void
+    E --> character
+    D --> D1[integer]
+    D --> D2[inexact]
+    D1 --> signedinteger
+    D1 --> unsignedinteger
+    D2 --> floating
+    D2 --> complexfloating
+
+
+    style A stroke-dasharray: 5 5
+    style D stroke-dasharray: 5 5
+    style E stroke-dasharray: 5 5
+    style D1 stroke-dasharray: 5 5
+    style D2 stroke-dasharray: 5 5
+    style character stroke-dasharray: 5 5
+    style signedinteger stroke-dasharray: 5 5
+    style unsignedinteger stroke-dasharray: 5 5
+    style floating stroke-dasharray: 5 5
+    style complexfloating stroke-dasharray: 5 5
+
